@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cimarrones Emprendedores</title>
+    <link rel="stylesheet" href="plugins/bootstrap.css">
+    <link rel="stylesheet" href="styles/mystyles.css">
+    <script src="https://kit.fontawesome.com/b8ce32ba45.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <div class="center-content">
+                <a href="https://www.uabc.mx/">
+                    <img src="assets/escudo-actualizado-2022.png" width="60" height="70" class="d-inline-block align-top" alt="">
+                </a>
+            </div>
+            <div class="center-content">
+                <h3 class="txtcentro">Cimarrones Emprendedores</h3>
+                <p class="txtcentro">Portal de Talleres UABC</p>
+            </div>
+            <div class="center-content">
+                <a class="logos" href="https://www.instagram.com/cimarronesemprendedores/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a class="logos" href="https://www.facebook.com/CimarronesEmprendedoresUABC/?locale=es_LA">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Panel principal -->
+    <main class="log-bg">
+        <!-- Panel del formulario -->
+        <div class="form">
+            <h1 class="form-middle">Inicio</h1>
+            <!-- Barra de seleccion -->
+            <div class="input-control">
+                <select name="txtOption" id="txtOption">
+                    <option value="">Seleccionar</option>
+                    <option value="option1">Alumno</option>
+                    <option value="option2">Docente</option>
+                    <option value="option3">Egresado</option>
+                    <option value="option4">Exterior</option>
+                </select>
+            </div>
+            <div>
+                <!-- Alumnos -->
+                <div id="option1" class="input-columns-flex">
+                    <div class="input-control">
+                        <input type="text" name="matricula" id="txtId" required="">
+                        <label>Matricula</label>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-reg btn-small search" id=""><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <!-- Docentes -->
+                <div id="option2" class="input-columns-flex">
+                    <div class="input-control">
+                        <input type="text" name="noEmpleado" id="txtId" required="">
+                        <label>No. De Empleado</label>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-reg btn-small search" id=""><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <!-- Inputs -->
+                <div id="inputGeneral" class="input-columns">
+                    <div class="input-control">
+                        <input type="text" name="nombre" id="txtNombre" required="">
+                        <label>Nombre(s)</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="text" name="apellidoP" id="txtApellidoP" required="">
+                        <label>Apellido Paterno</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="text" name="apellidoM" id="txtApellidoM" required="">
+                        <label>Apellido Materno</label>
+                    </div>
+                    <div class="input-control">
+                        <input type="text" name="email" id="txtEmail" required="">
+                        <label>Correo Electronico</label>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn-reg" id="btnEdit">Editar</button>
+                </div>
+                <!-- Optiones Extras -->
+                <!-- Ubicacion Y Facultad -->
+                <div class="input-columns">
+                    <div id="ubicacion">
+                        <h1 class="form-normal">Campus</h1>
+                        <div class="input-control">
+                            <select name="txtCampus" id="txtCampus">
+                                <option value=""></option>
+                                <option value="Tijuana">Ensenada</option>
+                                <option value="Mexicali">Mexicali</option>
+                                <option value="Ensenada">Tijuana</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="facultad">
+                        <h1 class="form-normal">Facultad</h1>
+                        <div class="input-control">
+                            <select name="txtFacultad" id="txtFacultad">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Taller -->
+                <div id="taller">
+                    <h1 class="form-normal">Taller</h1>
+                    <div class="input-control">
+                        <select name="txtTaller" id="txtTaller">
+                        </select>
+                    </div>
+                </div>
+                <!-- Boton siguiente. -->
+                <div>
+                    <button type="button" class="btn-reg" id="btnNext">Siguiente</button>
+                    <div class="hide noti" id="notifications">Notificaciones Aqui.</div>
+                </div>
+                <div>
+                    <button type="button" class="btn-reg" id="btnRegister">Registrarse</button>
+                    <div class="hide noti" id="notifications">Notificaciones Aqui.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Scripts -->
+    <script src="plugins/jquery3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="scripts/register.js"></script>
+</body>
+
+</html>
